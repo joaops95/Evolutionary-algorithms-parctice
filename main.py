@@ -1,6 +1,7 @@
 import random
 import time
 import numpy as np
+import json
 # Master mind
 # criar um padrao random de 0 e 1s com um numero de bits
 
@@ -44,12 +45,33 @@ def runGetCorrectPattern(correct_pattern, nbits):
     }
 
 if(__name__ == '__main__'):
+    testResults = {}
     n_bits = [2, 4, 5]
     number_of_tests = 30
     random.seed(123123)
-    for i in range(0, number_of_tests):
+    for test in range(0, number_of_tests):
         for nbit in n_bits:
             correct_pattern = np.random.randint(0,2 ,2**nbit)
             paterndata = runGetCorrectPattern(correct_pattern, nbit)
             print(paterndata)
+
+            try:
+                testResults[test]['results'].append({
+                    'nbits': nbit,
+                    'execution_time':paterndata['timeTaken'],
+                    'reward':paterndata['numberOfAttempts']
+
+                })
+            except KeyError:
+                testResults[test] = {}
+                testResults[test]['results'] = [
+                    {
+                    'nbits': nbit,
+                    'execution_time':paterndata['timeTaken'],
+                    'reward':paterndata['numberOfAttempts']
+                    }
+                ]
+            with open('results.json', 'w') as outfile:
+                json.dump(testResults, outfile, indent=4, sort_keys=True)
+
     # print(random_pattern)
