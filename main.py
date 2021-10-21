@@ -2,6 +2,7 @@ import random
 import time
 import numpy as np
 import json
+import matplotlib as plt
 # Master mind
 # criar um padrao random de 0 e 1s com um numero de bits
 
@@ -27,9 +28,7 @@ def runGetCorrectPattern(correct_pattern, nbits):
     numberOfAttempts = 0
     start = time.time()
     while not correct:
-        
-        random_pattern = np.random.randint(0,2 ,2**nbits)
-
+        random_pattern = np.random.randint(0,2 ,nbits)
 
         comparison = random_pattern == correct_pattern
         numberOfAttempts += 1
@@ -46,12 +45,12 @@ def runGetCorrectPattern(correct_pattern, nbits):
 
 if(__name__ == '__main__'):
     testResults = {}
-    n_bits = [2, 4, 5]
+    n_bits = [2, 4, 8, 12, 16, 24, 32]
     number_of_tests = 30
     random.seed(123123)
     for test in range(0, number_of_tests):
         for nbit in n_bits:
-            correct_pattern = np.random.randint(0,2 ,2**nbit)
+            correct_pattern = np.random.randint(0,2 ,nbit)
             paterndata = runGetCorrectPattern(correct_pattern, nbit)
             print(paterndata)
 
@@ -59,7 +58,7 @@ if(__name__ == '__main__'):
                 testResults[test]['results'].append({
                     'nbits': nbit,
                     'execution_time':paterndata['timeTaken'],
-                    'reward':paterndata['numberOfAttempts']
+                    'attempts':paterndata['numberOfAttempts']
 
                 })
             except KeyError:
@@ -68,10 +67,22 @@ if(__name__ == '__main__'):
                     {
                     'nbits': nbit,
                     'execution_time':paterndata['timeTaken'],
-                    'reward':paterndata['numberOfAttempts']
+                    'attempts':paterndata['numberOfAttempts']
                     }
                 ]
             with open('results.json', 'w') as outfile:
                 json.dump(testResults, outfile, indent=4, sort_keys=True)
+
+
+    fig1, ax = plt.subplots()
+    ax.set_title('Agent execution time (to reach the final goal) per episode')
+    bp = ax.boxplot(runTimes)
+    data = open('results.json',)
+    average_attempts = [] 
+    data = json.load(data)
+    for item in data:
+        for res in data['results']:
+            average_attempts 
+            plt.show()
 
     # print(random_pattern)
