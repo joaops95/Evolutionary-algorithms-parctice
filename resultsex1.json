@@ -1,0 +1,1322 @@
+{
+    "0": {
+        "results": [
+            {
+                "attempts": 1,
+                "execution_time": 2.9325485229492188e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 1,
+                "execution_time": 1.5497207641601562e-05,
+                "nbits": 4
+            },
+            {
+                "attempts": 204,
+                "execution_time": 0.0021643638610839844,
+                "nbits": 8
+            },
+            {
+                "attempts": 815,
+                "execution_time": 0.00910329818725586,
+                "nbits": 12
+            },
+            {
+                "attempts": 27291,
+                "execution_time": 0.2866787910461426,
+                "nbits": 16
+            },
+            {
+                "attempts": 51903,
+                "execution_time": 0.5175013542175293,
+                "nbits": 18
+            },
+            {
+                "attempts": 2098114,
+                "execution_time": 21.222708702087402,
+                "nbits": 22
+            },
+            {
+                "attempts": 12059112,
+                "execution_time": 119.27851176261902,
+                "nbits": 24
+            }
+        ]
+    },
+    "1": {
+        "results": [
+            {
+                "attempts": 1,
+                "execution_time": 1.3828277587890625e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 1,
+                "execution_time": 1.5020370483398438e-05,
+                "nbits": 4
+            },
+            {
+                "attempts": 121,
+                "execution_time": 0.0011658668518066406,
+                "nbits": 8
+            },
+            {
+                "attempts": 4020,
+                "execution_time": 0.038326263427734375,
+                "nbits": 12
+            },
+            {
+                "attempts": 15159,
+                "execution_time": 0.14944839477539062,
+                "nbits": 16
+            },
+            {
+                "attempts": 606257,
+                "execution_time": 5.974048852920532,
+                "nbits": 18
+            },
+            {
+                "attempts": 601988,
+                "execution_time": 5.889723539352417,
+                "nbits": 22
+            },
+            {
+                "attempts": 21013180,
+                "execution_time": 208.2235243320465,
+                "nbits": 24
+            }
+        ]
+    },
+    "2": {
+        "results": [
+            {
+                "attempts": 13,
+                "execution_time": 0.00013947486877441406,
+                "nbits": 2
+            },
+            {
+                "attempts": 6,
+                "execution_time": 7.915496826171875e-05,
+                "nbits": 4
+            },
+            {
+                "attempts": 127,
+                "execution_time": 0.0014362335205078125,
+                "nbits": 8
+            },
+            {
+                "attempts": 339,
+                "execution_time": 0.0035452842712402344,
+                "nbits": 12
+            },
+            {
+                "attempts": 32653,
+                "execution_time": 0.3292083740234375,
+                "nbits": 16
+            },
+            {
+                "attempts": 629,
+                "execution_time": 0.006177663803100586,
+                "nbits": 18
+            },
+            {
+                "attempts": 1025156,
+                "execution_time": 10.087173700332642,
+                "nbits": 22
+            },
+            {
+                "attempts": 30033754,
+                "execution_time": 303.54101395606995,
+                "nbits": 24
+            }
+        ]
+    },
+    "3": {
+        "results": [
+            {
+                "attempts": 5,
+                "execution_time": 5.7697296142578125e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 2,
+                "execution_time": 3.123283386230469e-05,
+                "nbits": 4
+            },
+            {
+                "attempts": 133,
+                "execution_time": 0.0014827251434326172,
+                "nbits": 8
+            },
+            {
+                "attempts": 4997,
+                "execution_time": 0.051817893981933594,
+                "nbits": 12
+            },
+            {
+                "attempts": 5662,
+                "execution_time": 0.05863189697265625,
+                "nbits": 16
+            },
+            {
+                "attempts": 112423,
+                "execution_time": 1.142517328262329,
+                "nbits": 18
+            },
+            {
+                "attempts": 4225778,
+                "execution_time": 41.92536020278931,
+                "nbits": 22
+            },
+            {
+                "attempts": 19911480,
+                "execution_time": 200.31946563720703,
+                "nbits": 24
+            }
+        ]
+    },
+    "4": {
+        "results": [
+            {
+                "attempts": 1,
+                "execution_time": 1.430511474609375e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 37,
+                "execution_time": 0.0003638267517089844,
+                "nbits": 4
+            },
+            {
+                "attempts": 189,
+                "execution_time": 0.0018491744995117188,
+                "nbits": 8
+            },
+            {
+                "attempts": 866,
+                "execution_time": 0.00829935073852539,
+                "nbits": 12
+            },
+            {
+                "attempts": 101359,
+                "execution_time": 0.9922199249267578,
+                "nbits": 16
+            },
+            {
+                "attempts": 349171,
+                "execution_time": 3.3521974086761475,
+                "nbits": 18
+            },
+            {
+                "attempts": 5738021,
+                "execution_time": 55.809166431427,
+                "nbits": 22
+            },
+            {
+                "attempts": 24620103,
+                "execution_time": 248.54390358924866,
+                "nbits": 24
+            }
+        ]
+    },
+    "5": {
+        "results": [
+            {
+                "attempts": 2,
+                "execution_time": 2.6226043701171875e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 20,
+                "execution_time": 0.00024771690368652344,
+                "nbits": 4
+            },
+            {
+                "attempts": 464,
+                "execution_time": 0.004672050476074219,
+                "nbits": 8
+            },
+            {
+                "attempts": 4791,
+                "execution_time": 0.048520803451538086,
+                "nbits": 12
+            },
+            {
+                "attempts": 20541,
+                "execution_time": 0.2171320915222168,
+                "nbits": 16
+            },
+            {
+                "attempts": 334923,
+                "execution_time": 3.6068174839019775,
+                "nbits": 18
+            },
+            {
+                "attempts": 6581849,
+                "execution_time": 68.9234025478363,
+                "nbits": 22
+            },
+            {
+                "attempts": 3772002,
+                "execution_time": 38.30571365356445,
+                "nbits": 24
+            }
+        ]
+    },
+    "6": {
+        "results": [
+            {
+                "attempts": 1,
+                "execution_time": 1.5020370483398438e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 16,
+                "execution_time": 0.00017499923706054688,
+                "nbits": 4
+            },
+            {
+                "attempts": 354,
+                "execution_time": 0.003397226333618164,
+                "nbits": 8
+            },
+            {
+                "attempts": 715,
+                "execution_time": 0.0070726871490478516,
+                "nbits": 12
+            },
+            {
+                "attempts": 170625,
+                "execution_time": 1.6922731399536133,
+                "nbits": 16
+            },
+            {
+                "attempts": 984757,
+                "execution_time": 9.707480430603027,
+                "nbits": 18
+            },
+            {
+                "attempts": 3171163,
+                "execution_time": 31.570974349975586,
+                "nbits": 22
+            },
+            {
+                "attempts": 14198400,
+                "execution_time": 143.8900887966156,
+                "nbits": 24
+            }
+        ]
+    },
+    "7": {
+        "results": [
+            {
+                "attempts": 2,
+                "execution_time": 2.6702880859375e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 22,
+                "execution_time": 0.00022268295288085938,
+                "nbits": 4
+            },
+            {
+                "attempts": 20,
+                "execution_time": 0.00020623207092285156,
+                "nbits": 8
+            },
+            {
+                "attempts": 2546,
+                "execution_time": 0.025609970092773438,
+                "nbits": 12
+            },
+            {
+                "attempts": 191658,
+                "execution_time": 2.043811798095703,
+                "nbits": 16
+            },
+            {
+                "attempts": 67602,
+                "execution_time": 0.705521821975708,
+                "nbits": 18
+            },
+            {
+                "attempts": 14308498,
+                "execution_time": 144.6458866596222,
+                "nbits": 22
+            },
+            {
+                "attempts": 15040852,
+                "execution_time": 151.58627438545227,
+                "nbits": 24
+            }
+        ]
+    },
+    "8": {
+        "results": [
+            {
+                "attempts": 3,
+                "execution_time": 3.5762786865234375e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 14,
+                "execution_time": 0.0001513957977294922,
+                "nbits": 4
+            },
+            {
+                "attempts": 35,
+                "execution_time": 0.000362396240234375,
+                "nbits": 8
+            },
+            {
+                "attempts": 424,
+                "execution_time": 0.004177570343017578,
+                "nbits": 12
+            },
+            {
+                "attempts": 7260,
+                "execution_time": 0.07382750511169434,
+                "nbits": 16
+            },
+            {
+                "attempts": 534201,
+                "execution_time": 5.551824569702148,
+                "nbits": 18
+            },
+            {
+                "attempts": 1500116,
+                "execution_time": 15.15028715133667,
+                "nbits": 22
+            },
+            {
+                "attempts": 4131138,
+                "execution_time": 40.73691701889038,
+                "nbits": 24
+            }
+        ]
+    },
+    "9": {
+        "results": [
+            {
+                "attempts": 1,
+                "execution_time": 1.4781951904296875e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 17,
+                "execution_time": 0.0001990795135498047,
+                "nbits": 4
+            },
+            {
+                "attempts": 40,
+                "execution_time": 0.00044345855712890625,
+                "nbits": 8
+            },
+            {
+                "attempts": 10661,
+                "execution_time": 0.10601329803466797,
+                "nbits": 12
+            },
+            {
+                "attempts": 18875,
+                "execution_time": 0.20989108085632324,
+                "nbits": 16
+            },
+            {
+                "attempts": 2677,
+                "execution_time": 0.02624344825744629,
+                "nbits": 18
+            },
+            {
+                "attempts": 3243043,
+                "execution_time": 32.71433138847351,
+                "nbits": 22
+            },
+            {
+                "attempts": 11984108,
+                "execution_time": 120.00170660018921,
+                "nbits": 24
+            }
+        ]
+    },
+    "10": {
+        "results": [
+            {
+                "attempts": 1,
+                "execution_time": 1.3828277587890625e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 8,
+                "execution_time": 0.00010991096496582031,
+                "nbits": 4
+            },
+            {
+                "attempts": 363,
+                "execution_time": 0.003557920455932617,
+                "nbits": 8
+            },
+            {
+                "attempts": 2825,
+                "execution_time": 0.028031349182128906,
+                "nbits": 12
+            },
+            {
+                "attempts": 18983,
+                "execution_time": 0.18958091735839844,
+                "nbits": 16
+            },
+            {
+                "attempts": 192297,
+                "execution_time": 1.881117820739746,
+                "nbits": 18
+            },
+            {
+                "attempts": 1879878,
+                "execution_time": 18.727976322174072,
+                "nbits": 22
+            },
+            {
+                "attempts": 31875616,
+                "execution_time": 317.26981377601624,
+                "nbits": 24
+            }
+        ]
+    },
+    "11": {
+        "results": [
+            {
+                "attempts": 7,
+                "execution_time": 7.700920104980469e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 17,
+                "execution_time": 0.00017976760864257812,
+                "nbits": 4
+            },
+            {
+                "attempts": 140,
+                "execution_time": 0.0014040470123291016,
+                "nbits": 8
+            },
+            {
+                "attempts": 5896,
+                "execution_time": 0.05874276161193848,
+                "nbits": 12
+            },
+            {
+                "attempts": 49561,
+                "execution_time": 0.4978299140930176,
+                "nbits": 16
+            },
+            {
+                "attempts": 605875,
+                "execution_time": 6.051069259643555,
+                "nbits": 18
+            },
+            {
+                "attempts": 8240169,
+                "execution_time": 83.17651796340942,
+                "nbits": 22
+            },
+            {
+                "attempts": 56646876,
+                "execution_time": 564.334508895874,
+                "nbits": 24
+            }
+        ]
+    },
+    "12": {
+        "results": [
+            {
+                "attempts": 1,
+                "execution_time": 1.4543533325195312e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 20,
+                "execution_time": 0.0002105236053466797,
+                "nbits": 4
+            },
+            {
+                "attempts": 6,
+                "execution_time": 7.176399230957031e-05,
+                "nbits": 8
+            },
+            {
+                "attempts": 979,
+                "execution_time": 0.009796619415283203,
+                "nbits": 12
+            },
+            {
+                "attempts": 132647,
+                "execution_time": 1.3677265644073486,
+                "nbits": 16
+            },
+            {
+                "attempts": 9164,
+                "execution_time": 0.09003877639770508,
+                "nbits": 18
+            },
+            {
+                "attempts": 2910115,
+                "execution_time": 29.30737566947937,
+                "nbits": 22
+            },
+            {
+                "attempts": 10009095,
+                "execution_time": 98.23137545585632,
+                "nbits": 24
+            }
+        ]
+    },
+    "13": {
+        "results": [
+            {
+                "attempts": 1,
+                "execution_time": 1.9788742065429688e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 7,
+                "execution_time": 7.987022399902344e-05,
+                "nbits": 4
+            },
+            {
+                "attempts": 320,
+                "execution_time": 0.0031502246856689453,
+                "nbits": 8
+            },
+            {
+                "attempts": 8316,
+                "execution_time": 0.08186125755310059,
+                "nbits": 12
+            },
+            {
+                "attempts": 17372,
+                "execution_time": 0.17392516136169434,
+                "nbits": 16
+            },
+            {
+                "attempts": 670602,
+                "execution_time": 6.701113224029541,
+                "nbits": 18
+            },
+            {
+                "attempts": 4200873,
+                "execution_time": 41.458112478256226,
+                "nbits": 22
+            },
+            {
+                "attempts": 2542774,
+                "execution_time": 25.56041193008423,
+                "nbits": 24
+            }
+        ]
+    },
+    "14": {
+        "results": [
+            {
+                "attempts": 2,
+                "execution_time": 2.5510787963867188e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 11,
+                "execution_time": 0.00012254714965820312,
+                "nbits": 4
+            },
+            {
+                "attempts": 24,
+                "execution_time": 0.0002510547637939453,
+                "nbits": 8
+            },
+            {
+                "attempts": 33,
+                "execution_time": 0.0003719329833984375,
+                "nbits": 12
+            },
+            {
+                "attempts": 15803,
+                "execution_time": 0.15730071067810059,
+                "nbits": 16
+            },
+            {
+                "attempts": 741529,
+                "execution_time": 7.546894311904907,
+                "nbits": 18
+            },
+            {
+                "attempts": 4171931,
+                "execution_time": 41.93993854522705,
+                "nbits": 22
+            },
+            {
+                "attempts": 4332783,
+                "execution_time": 42.97808527946472,
+                "nbits": 24
+            }
+        ]
+    },
+    "15": {
+        "results": [
+            {
+                "attempts": 2,
+                "execution_time": 2.5510787963867188e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 31,
+                "execution_time": 0.0003147125244140625,
+                "nbits": 4
+            },
+            {
+                "attempts": 490,
+                "execution_time": 0.004851818084716797,
+                "nbits": 8
+            },
+            {
+                "attempts": 7252,
+                "execution_time": 0.07095575332641602,
+                "nbits": 12
+            },
+            {
+                "attempts": 66282,
+                "execution_time": 0.6643257141113281,
+                "nbits": 16
+            },
+            {
+                "attempts": 115910,
+                "execution_time": 1.128483533859253,
+                "nbits": 18
+            },
+            {
+                "attempts": 4271676,
+                "execution_time": 42.22374081611633,
+                "nbits": 22
+            },
+            {
+                "attempts": 9837064,
+                "execution_time": 96.72598719596863,
+                "nbits": 24
+            }
+        ]
+    },
+    "16": {
+        "results": [
+            {
+                "attempts": 5,
+                "execution_time": 5.5789947509765625e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 2,
+                "execution_time": 2.5272369384765625e-05,
+                "nbits": 4
+            },
+            {
+                "attempts": 53,
+                "execution_time": 0.0005397796630859375,
+                "nbits": 8
+            },
+            {
+                "attempts": 10,
+                "execution_time": 0.00010919570922851562,
+                "nbits": 12
+            },
+            {
+                "attempts": 25423,
+                "execution_time": 0.2533230781555176,
+                "nbits": 16
+            },
+            {
+                "attempts": 45685,
+                "execution_time": 0.44794249534606934,
+                "nbits": 18
+            },
+            {
+                "attempts": 2048065,
+                "execution_time": 20.075255632400513,
+                "nbits": 22
+            },
+            {
+                "attempts": 6515289,
+                "execution_time": 64.47820615768433,
+                "nbits": 24
+            }
+        ]
+    },
+    "17": {
+        "results": [
+            {
+                "attempts": 2,
+                "execution_time": 2.6941299438476562e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 3,
+                "execution_time": 3.600120544433594e-05,
+                "nbits": 4
+            },
+            {
+                "attempts": 132,
+                "execution_time": 0.001306295394897461,
+                "nbits": 8
+            },
+            {
+                "attempts": 5304,
+                "execution_time": 0.05306267738342285,
+                "nbits": 12
+            },
+            {
+                "attempts": 48214,
+                "execution_time": 0.48520970344543457,
+                "nbits": 16
+            },
+            {
+                "attempts": 197624,
+                "execution_time": 1.9664061069488525,
+                "nbits": 18
+            },
+            {
+                "attempts": 10475451,
+                "execution_time": 104.37326264381409,
+                "nbits": 22
+            },
+            {
+                "attempts": 38723679,
+                "execution_time": 380.9027724266052,
+                "nbits": 24
+            }
+        ]
+    },
+    "18": {
+        "results": [
+            {
+                "attempts": 1,
+                "execution_time": 1.430511474609375e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 24,
+                "execution_time": 0.0002582073211669922,
+                "nbits": 4
+            },
+            {
+                "attempts": 468,
+                "execution_time": 0.004763603210449219,
+                "nbits": 8
+            },
+            {
+                "attempts": 581,
+                "execution_time": 0.005816459655761719,
+                "nbits": 12
+            },
+            {
+                "attempts": 20069,
+                "execution_time": 0.19759774208068848,
+                "nbits": 16
+            },
+            {
+                "attempts": 529904,
+                "execution_time": 5.158867359161377,
+                "nbits": 18
+            },
+            {
+                "attempts": 7715392,
+                "execution_time": 75.3383104801178,
+                "nbits": 22
+            },
+            {
+                "attempts": 6019573,
+                "execution_time": 58.27789092063904,
+                "nbits": 24
+            }
+        ]
+    },
+    "19": {
+        "results": [
+            {
+                "attempts": 12,
+                "execution_time": 0.00012421607971191406,
+                "nbits": 2
+            },
+            {
+                "attempts": 4,
+                "execution_time": 4.982948303222656e-05,
+                "nbits": 4
+            },
+            {
+                "attempts": 13,
+                "execution_time": 0.00013947486877441406,
+                "nbits": 8
+            },
+            {
+                "attempts": 2722,
+                "execution_time": 0.026331424713134766,
+                "nbits": 12
+            },
+            {
+                "attempts": 91093,
+                "execution_time": 0.8975284099578857,
+                "nbits": 16
+            },
+            {
+                "attempts": 43842,
+                "execution_time": 0.4291679859161377,
+                "nbits": 18
+            },
+            {
+                "attempts": 1404145,
+                "execution_time": 13.66214919090271,
+                "nbits": 22
+            },
+            {
+                "attempts": 6782121,
+                "execution_time": 66.85198044776917,
+                "nbits": 24
+            }
+        ]
+    },
+    "20": {
+        "results": [
+            {
+                "attempts": 8,
+                "execution_time": 8.416175842285156e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 8,
+                "execution_time": 0.0001049041748046875,
+                "nbits": 4
+            },
+            {
+                "attempts": 63,
+                "execution_time": 0.0006253719329833984,
+                "nbits": 8
+            },
+            {
+                "attempts": 5911,
+                "execution_time": 0.05838608741760254,
+                "nbits": 12
+            },
+            {
+                "attempts": 46298,
+                "execution_time": 0.45204639434814453,
+                "nbits": 16
+            },
+            {
+                "attempts": 26076,
+                "execution_time": 0.2610340118408203,
+                "nbits": 18
+            },
+            {
+                "attempts": 586984,
+                "execution_time": 5.708032608032227,
+                "nbits": 22
+            },
+            {
+                "attempts": 98915544,
+                "execution_time": 959.7834923267365,
+                "nbits": 24
+            }
+        ]
+    },
+    "21": {
+        "results": [
+            {
+                "attempts": 3,
+                "execution_time": 3.743171691894531e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 42,
+                "execution_time": 0.00041747093200683594,
+                "nbits": 4
+            },
+            {
+                "attempts": 538,
+                "execution_time": 0.00521540641784668,
+                "nbits": 8
+            },
+            {
+                "attempts": 4330,
+                "execution_time": 0.042639732360839844,
+                "nbits": 12
+            },
+            {
+                "attempts": 289941,
+                "execution_time": 2.815250873565674,
+                "nbits": 16
+            },
+            {
+                "attempts": 51007,
+                "execution_time": 0.48665738105773926,
+                "nbits": 18
+            },
+            {
+                "attempts": 849749,
+                "execution_time": 8.1367666721344,
+                "nbits": 22
+            },
+            {
+                "attempts": 42133268,
+                "execution_time": 409.8917486667633,
+                "nbits": 24
+            }
+        ]
+    },
+    "22": {
+        "results": [
+            {
+                "attempts": 1,
+                "execution_time": 1.4066696166992188e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 3,
+                "execution_time": 5.14984130859375e-05,
+                "nbits": 4
+            },
+            {
+                "attempts": 32,
+                "execution_time": 0.00032639503479003906,
+                "nbits": 8
+            },
+            {
+                "attempts": 1635,
+                "execution_time": 0.015865325927734375,
+                "nbits": 12
+            },
+            {
+                "attempts": 55345,
+                "execution_time": 0.5402731895446777,
+                "nbits": 16
+            },
+            {
+                "attempts": 562824,
+                "execution_time": 5.5087668895721436,
+                "nbits": 18
+            },
+            {
+                "attempts": 137816,
+                "execution_time": 1.3818020820617676,
+                "nbits": 22
+            },
+            {
+                "attempts": 713537,
+                "execution_time": 6.935499429702759,
+                "nbits": 24
+            }
+        ]
+    },
+    "23": {
+        "results": [
+            {
+                "attempts": 9,
+                "execution_time": 9.5367431640625e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 2,
+                "execution_time": 2.5033950805664062e-05,
+                "nbits": 4
+            },
+            {
+                "attempts": 34,
+                "execution_time": 0.0003447532653808594,
+                "nbits": 8
+            },
+            {
+                "attempts": 96,
+                "execution_time": 0.0009267330169677734,
+                "nbits": 12
+            },
+            {
+                "attempts": 4519,
+                "execution_time": 0.04377293586730957,
+                "nbits": 16
+            },
+            {
+                "attempts": 5171,
+                "execution_time": 0.050079345703125,
+                "nbits": 18
+            },
+            {
+                "attempts": 1572447,
+                "execution_time": 15.213601112365723,
+                "nbits": 22
+            },
+            {
+                "attempts": 22851255,
+                "execution_time": 221.61768770217896,
+                "nbits": 24
+            }
+        ]
+    },
+    "24": {
+        "results": [
+            {
+                "attempts": 3,
+                "execution_time": 3.528594970703125e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 4,
+                "execution_time": 4.9591064453125e-05,
+                "nbits": 4
+            },
+            {
+                "attempts": 1883,
+                "execution_time": 0.018114089965820312,
+                "nbits": 8
+            },
+            {
+                "attempts": 3132,
+                "execution_time": 0.03010725975036621,
+                "nbits": 12
+            },
+            {
+                "attempts": 30509,
+                "execution_time": 0.2978935241699219,
+                "nbits": 16
+            },
+            {
+                "attempts": 115628,
+                "execution_time": 1.116652250289917,
+                "nbits": 18
+            },
+            {
+                "attempts": 1975420,
+                "execution_time": 19.06356453895569,
+                "nbits": 22
+            },
+            {
+                "attempts": 17636365,
+                "execution_time": 171.93945479393005,
+                "nbits": 24
+            }
+        ]
+    },
+    "25": {
+        "results": [
+            {
+                "attempts": 4,
+                "execution_time": 4.792213439941406e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 14,
+                "execution_time": 0.00014925003051757812,
+                "nbits": 4
+            },
+            {
+                "attempts": 212,
+                "execution_time": 0.0020728111267089844,
+                "nbits": 8
+            },
+            {
+                "attempts": 8482,
+                "execution_time": 0.08308148384094238,
+                "nbits": 12
+            },
+            {
+                "attempts": 1869,
+                "execution_time": 0.018598556518554688,
+                "nbits": 16
+            },
+            {
+                "attempts": 39883,
+                "execution_time": 0.3878612518310547,
+                "nbits": 18
+            },
+            {
+                "attempts": 720336,
+                "execution_time": 7.206565618515015,
+                "nbits": 22
+            },
+            {
+                "attempts": 1944211,
+                "execution_time": 19.13043189048767,
+                "nbits": 24
+            }
+        ]
+    },
+    "26": {
+        "results": [
+            {
+                "attempts": 2,
+                "execution_time": 2.7894973754882812e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 16,
+                "execution_time": 0.00017189979553222656,
+                "nbits": 4
+            },
+            {
+                "attempts": 40,
+                "execution_time": 0.00040984153747558594,
+                "nbits": 8
+            },
+            {
+                "attempts": 1949,
+                "execution_time": 0.018929243087768555,
+                "nbits": 12
+            },
+            {
+                "attempts": 49735,
+                "execution_time": 0.4818892478942871,
+                "nbits": 16
+            },
+            {
+                "attempts": 352662,
+                "execution_time": 3.4019856452941895,
+                "nbits": 18
+            },
+            {
+                "attempts": 23777453,
+                "execution_time": 230.9005868434906,
+                "nbits": 22
+            },
+            {
+                "attempts": 2064708,
+                "execution_time": 20.28688097000122,
+                "nbits": 24
+            }
+        ]
+    },
+    "27": {
+        "results": [
+            {
+                "attempts": 7,
+                "execution_time": 7.581710815429688e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 2,
+                "execution_time": 2.574920654296875e-05,
+                "nbits": 4
+            },
+            {
+                "attempts": 410,
+                "execution_time": 0.003950834274291992,
+                "nbits": 8
+            },
+            {
+                "attempts": 2285,
+                "execution_time": 0.022251129150390625,
+                "nbits": 12
+            },
+            {
+                "attempts": 65396,
+                "execution_time": 0.6348092555999756,
+                "nbits": 16
+            },
+            {
+                "attempts": 73822,
+                "execution_time": 0.7384195327758789,
+                "nbits": 18
+            },
+            {
+                "attempts": 359563,
+                "execution_time": 3.6450536251068115,
+                "nbits": 22
+            },
+            {
+                "attempts": 21700364,
+                "execution_time": 209.78883862495422,
+                "nbits": 24
+            }
+        ]
+    },
+    "28": {
+        "results": [
+            {
+                "attempts": 1,
+                "execution_time": 1.5020370483398438e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 7,
+                "execution_time": 7.963180541992188e-05,
+                "nbits": 4
+            },
+            {
+                "attempts": 1021,
+                "execution_time": 0.009885787963867188,
+                "nbits": 8
+            },
+            {
+                "attempts": 499,
+                "execution_time": 0.004795551300048828,
+                "nbits": 12
+            },
+            {
+                "attempts": 97612,
+                "execution_time": 0.9366610050201416,
+                "nbits": 16
+            },
+            {
+                "attempts": 74814,
+                "execution_time": 0.7202880382537842,
+                "nbits": 18
+            },
+            {
+                "attempts": 212250,
+                "execution_time": 2.045562982559204,
+                "nbits": 22
+            },
+            {
+                "attempts": 10363532,
+                "execution_time": 100.22275900840759,
+                "nbits": 24
+            }
+        ]
+    },
+    "29": {
+        "results": [
+            {
+                "attempts": 3,
+                "execution_time": 3.552436828613281e-05,
+                "nbits": 2
+            },
+            {
+                "attempts": 11,
+                "execution_time": 0.00011968612670898438,
+                "nbits": 4
+            },
+            {
+                "attempts": 294,
+                "execution_time": 0.0028438568115234375,
+                "nbits": 8
+            },
+            {
+                "attempts": 4465,
+                "execution_time": 0.0434260368347168,
+                "nbits": 12
+            },
+            {
+                "attempts": 738,
+                "execution_time": 0.0071222782135009766,
+                "nbits": 16
+            },
+            {
+                "attempts": 205758,
+                "execution_time": 1.993821382522583,
+                "nbits": 18
+            },
+            {
+                "attempts": 1957621,
+                "execution_time": 19.09434676170349,
+                "nbits": 22
+            },
+            {
+                "attempts": 39824524,
+                "execution_time": 388.04993510246277,
+                "nbits": 24
+            }
+        ]
+    }
+}

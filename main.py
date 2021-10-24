@@ -2,7 +2,8 @@ import random
 import time
 import numpy as np
 import json
-import matplotlib as plt
+import matplotlib.pyplot as plt
+import pandas as pd
 # Master mind
 # criar um padrao random de 0 e 1s com um numero de bits
 
@@ -22,15 +23,70 @@ import matplotlib as plt
 #6 padrao nao e so binario, podemos ter mais cores
 
 #7 como poderiamos utilizar um algoritmo evolucionario
+def evaluationForPatter(eval_correct_pattern, eval_random_pattern):
+    return (abs(len(eval_correct_pattern) - np.sum(eval_correct_pattern == eval_random_pattern)))
+    # raise Exception
 
-def runGetCorrectPattern(correct_pattern, nbits):
+def fitnessForPatter(eval_correct_pattern, eval_random_pattern):
+    return np.sum(eval_correct_pattern == eval_random_pattern)
+    # raise Exception
+
+
+
+def mutateBit(muttated_random_pattern):
+    random_index = np.random.randint(0,len(muttated_random_pattern))
+    print(muttated_random_pattern)
+
+    if(muttated_random_pattern[random_index] == 0):
+        muttated_random_pattern[random_index] = 1
+    else: 
+        muttated_random_pattern[random_index] = 0
+
+    print(muttated_random_pattern)
+    return muttated_random_pattern
+    # raise Exception
+
+
+def runGetCorrectPattern(correct_pattern, nbits, population = False):
     correct = False
     numberOfAttempts = 0
     start = time.time()
-    while not correct:
-        random_pattern = np.random.randint(0,2 ,nbits)
+    random_pattern = np.random.randint(0,2 ,nbits)
+    if(population):
+        random_population = np.random.randint(0,2, size=(100, nbits))
+        df = pd.DataFrame(random_population)
+        df['fitness'] = df.apply(lambda x: fitnessForPatter(x, correct_pattern), axis=1)
+        df.sort_values(by='fitness', ascending=False, inplace=True)
+        print(df.head())
+        print(df.tail())
 
+        raise Exception
+    while not correct:
+        print(random_pattern)
         comparison = random_pattern == correct_pattern
+        better_pattern_found = False
+        idx = 0
+        while (idx < 1000 and not comparison.all()):
+            idx += 1
+            # print(correct_pattern)
+            # print(fitnessForPatter(correct_pattern,muttated_bit))
+            # print(fitnessForPatter(correct_pattern,random_pattern))
+            random_copy = random_pattern.copy()
+            muttated_bit = mutateBit(random_copy)
+            # print("better")
+            # print(random_pattern)
+            # print(muttated_bit)
+            # print(fitnessForPatter(correct_pattern,muttated_bit))
+            # print(fitnessForPatter(correct_pattern,random_pattern))
+
+            # raise Exception
+            fitness_mutated = fitnessForPatter(correct_pattern,muttated_bit)
+            fitness_random = fitnessForPatter(correct_pattern,random_pattern)
+            print(f"{fitness_mutated} - {fitness_random}")
+            if(fitness_mutated > fitness_random):
+                random_pattern = muttated_bit.copy()
+
+        # print(evaluationForPatter(correct_pattern, random_pattern))
         numberOfAttempts += 1
         if(comparison.all()):
             correct = True
@@ -43,15 +99,22 @@ def runGetCorrectPattern(correct_pattern, nbits):
         'numberOfAttempts':numberOfAttempts
     }
 
+def index_in_list(a_list, index):
+    return index < len(a_list)
+
+
 if(__name__ == '__main__'):
     testResults = {}
-    n_bits = [2, 4, 8, 12, 16, 24, 32]
+    showResults = []
+    n_bits = [8, 12, 16, 18, 22, 24, 64, 128, 256, 512, 1024, 1500, 2048, 2512]
     number_of_tests = 30
-    random.seed(123123)
+    # random.seed(123123) #used in exercise 1
+    random.seed(time.time()) #used in exercise 1
+    
     for test in range(0, number_of_tests):
         for nbit in n_bits:
             correct_pattern = np.random.randint(0,2 ,nbit)
-            paterndata = runGetCorrectPattern(correct_pattern, nbit)
+            paterndata = runGetCorrectPattern(correct_pattern, nbit, True)
             print(paterndata)
 
             try:
@@ -74,15 +137,43 @@ if(__name__ == '__main__'):
                 json.dump(testResults, outfile, indent=4, sort_keys=True)
 
 
-    fig1, ax = plt.subplots()
-    ax.set_title('Agent execution time (to reach the final goal) per episode')
-    bp = ax.boxplot(runTimes)
-    data = open('results.json',)
-    average_attempts = [] 
-    data = json.load(data)
-    for item in data:
-        for res in data['results']:
-            average_attempts 
-            plt.show()
 
+    data = open('results.json',)
+    attempts = [] 
+    timestamps = [] 
+    positions = []
+
+    data = json.load(data)
+    for item in data.keys():
+        item = data[item]
+
+        for i in range(0, len(item['results'])):
+            if(not index_in_list(attempts, i)):
+                attempts.append([])
+            if(not index_in_list(timestamps, i)):
+                timestamps.append([])
+            print(i)
+            attempts[i].append(item['results'][i]['attempts'])
+            timestamps[i].append(item['results'][i]['execution_time'])
+            if(not item['results'][i]['nbits'] in positions):
+                positions.append(item['results'][i]['nbits'])
+
+
+
+    fig1, ax = plt.subplots()
+    fig2, ax2 = plt.subplots()
+    ax.set_title('Box plot number of attempts throught the bit increasing')
+    ax2.set_title('Box plot execution times throught the bit increasing')
+
+    # print(attempts)
+    # print(timestamps)
+
+    bp = ax.boxplot(attempts)
+    bp = ax2.boxplot(timestamps)
+    ax.set_xticklabels(positions)
+    ax2.set_xticklabels(positions)
+
+    plt.show()
+
+# , positions=[2,4,5.5]
     # print(random_pattern)

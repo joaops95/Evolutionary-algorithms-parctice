@@ -1,0 +1,36 @@
+{
+    "0": {
+        "results": [
+            {
+                "attempts": 2,
+                "execution_time": 0.10374855995178223,
+                "nbits": 8
+            },
+            {
+                "attempts": 2,
+                "execution_time": 0.10285162925720215,
+                "nbits": 12
+            },
+            {
+                "attempts": 2,
+                "execution_time": 0.19087791442871094,
+                "nbits": 16
+            },
+            {
+                "attempts": 2,
+                "execution_time": 0.11299777030944824,
+                "nbits": 18
+            },
+            {
+                "attempts": 2,
+                "execution_time": 0.16349101066589355,
+                "nbits": 22
+            },
+            {
+                "attempts": 2,
+                "execution_time": 0.12452888488769531,
+                "nbits": 24
+            }
+        ]
+    }
+}
