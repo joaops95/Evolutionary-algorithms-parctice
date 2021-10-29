@@ -4,6 +4,9 @@ import numpy as np
 import json
 import matplotlib.pyplot as plt
 import pandas as pd
+import sys
+sys.setrecursionlimit(10**7) # max depth of recursion
+
 # Master mind
 # criar um padrao random de 0 e 1s com um numero de bits
 
@@ -35,16 +38,32 @@ def fitnessForPatter(eval_correct_pattern, eval_random_pattern):
 
 def mutateBit(muttated_random_pattern):
     random_index = np.random.randint(0,len(muttated_random_pattern))
-    print(muttated_random_pattern)
 
     if(muttated_random_pattern[random_index] == 0):
         muttated_random_pattern[random_index] = 1
     else: 
         muttated_random_pattern[random_index] = 0
 
-    print(muttated_random_pattern)
     return muttated_random_pattern
     # raise Exception
+
+def applyPopulationOnDataset(dataset, nbits, function_apply):
+    for item in dataset.to_numpy():
+        random_population = []
+        for i in range(0, 100):
+            random_population.append(function_apply(list(item)))
+
+        df = pd.DataFrame(np.asarray(random_population))
+
+        df['fitness'] = df.apply(lambda x: fitnessForPatter(x, correct_pattern), axis=1)
+        df.sort_values(by='fitness', ascending=False, inplace=True)
+        print(df['fitness'].iloc[0])
+        if(df['fitness'].iloc[0] == nbit):
+            raise Exception
+        df = df.iloc[:int(len(df)*0.3)]
+        df.drop(['fitness'], axis=1, inplace=True)
+
+        applyPopulationOnDataset(df, nbits, mutateBit)
 
 
 def runGetCorrectPattern(correct_pattern, nbits, population = False):
@@ -52,15 +71,7 @@ def runGetCorrectPattern(correct_pattern, nbits, population = False):
     numberOfAttempts = 0
     start = time.time()
     random_pattern = np.random.randint(0,2 ,nbits)
-    if(population):
-        random_population = np.random.randint(0,2, size=(100, nbits))
-        df = pd.DataFrame(random_population)
-        df['fitness'] = df.apply(lambda x: fitnessForPatter(x, correct_pattern), axis=1)
-        df.sort_values(by='fitness', ascending=False, inplace=True)
-        print(df.head())
-        print(df.tail())
 
-        raise Exception
     while not correct:
         print(random_pattern)
         comparison = random_pattern == correct_pattern
@@ -68,25 +79,29 @@ def runGetCorrectPattern(correct_pattern, nbits, population = False):
         idx = 0
         while (idx < 1000 and not comparison.all()):
             idx += 1
-            # print(correct_pattern)
-            # print(fitnessForPatter(correct_pattern,muttated_bit))
-            # print(fitnessForPatter(correct_pattern,random_pattern))
-            random_copy = random_pattern.copy()
-            muttated_bit = mutateBit(random_copy)
-            # print("better")
-            # print(random_pattern)
-            # print(muttated_bit)
-            # print(fitnessForPatter(correct_pattern,muttated_bit))
-            # print(fitnessForPatter(correct_pattern,random_pattern))
+            if(population):
+                    random_population = np.random.randint(0,2, size=(100, nbits))
+                    df = pd.DataFrame(random_population)
+                    df['fitness'] = df.apply(lambda x: fitnessForPatter(x, correct_pattern), axis=1)
+                    df.sort_values(by='fitness', ascending=False, inplace=True)
+                    # print(df['fitness'].iloc[0])
+                    # print(len(df))
+                    df = df.iloc[:int(len(df)*0.3)]
+                    df.drop(['fitness'], axis=1, inplace=True)
+                    value = applyPopulationOnDataset(df, nbits, mutateBit)
+                    if(df['fitness'].iloc[0] == nbit):
+                        print("found")
+                        raise Exception
+            else:
+                random_copy = random_pattern.copy()
+                muttated_bit = mutateBit(random_copy)
 
-            # raise Exception
-            fitness_mutated = fitnessForPatter(correct_pattern,muttated_bit)
-            fitness_random = fitnessForPatter(correct_pattern,random_pattern)
-            print(f"{fitness_mutated} - {fitness_random}")
-            if(fitness_mutated > fitness_random):
-                random_pattern = muttated_bit.copy()
-
-        # print(evaluationForPatter(correct_pattern, random_pattern))
+                fitness_mutated = fitnessForPatter(correct_pattern,muttated_bit)
+                fitness_random = fitnessForPatter(correct_pattern,random_pattern)
+                print(f"{fitness_mutated} - {fitness_random}")
+                if(fitness_mutated > fitness_random):
+                    random_pattern = muttated_bit.copy()
+            # print(evaluationForPatter(correct_pattern, random_pattern))
         numberOfAttempts += 1
         if(comparison.all()):
             correct = True
@@ -106,7 +121,7 @@ def index_in_list(a_list, index):
 if(__name__ == '__main__'):
     testResults = {}
     showResults = []
-    n_bits = [8, 12, 16, 18, 22, 24, 64, 128, 256, 512, 1024, 1500, 2048, 2512]
+    n_bits = [1024, 12, 16, 18, 22, 24, 64, 128, 256, 512, 1024, 1500, 2048, 2512]
     number_of_tests = 30
     # random.seed(123123) #used in exercise 1
     random.seed(time.time()) #used in exercise 1
@@ -115,7 +130,6 @@ if(__name__ == '__main__'):
         for nbit in n_bits:
             correct_pattern = np.random.randint(0,2 ,nbit)
             paterndata = runGetCorrectPattern(correct_pattern, nbit, True)
-            print(paterndata)
 
             try:
                 testResults[test]['results'].append({
