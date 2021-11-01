@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import sys
 sys.setrecursionlimit(10**7) # max depth of recursion
+numberOfAttemptsPop = 0
 
 # Master mind
 # criar um padrao random de 0 e 1s com um numero de bits
@@ -35,6 +36,13 @@ def fitnessForPatter(eval_correct_pattern, eval_random_pattern):
     # raise Exception
 
 
+def applyCrossOverForBits(A,B, x):
+    A_new = np.append(A[:x], B[x:])
+    B_new = np.append(B[:x], A[x:])
+    return A_new, B_new 
+    # raise Exception
+
+
 
 def mutateBit(muttated_random_pattern):
     random_index = np.random.randint(0,len(muttated_random_pattern))
@@ -47,23 +55,38 @@ def mutateBit(muttated_random_pattern):
     return muttated_random_pattern
     # raise Exception
 
-def applyPopulationOnDataset(dataset, nbits, function_apply):
-    for item in dataset.to_numpy():
+def applyPopulationOnDataset(numberOfAttemptsPop, dataset, nbits, function_apply):
+    numberOfAttemptsPop +=1
+    for ix, item in enumerate(dataset.to_numpy()):
         random_population = []
-        for i in range(0, 100):
-            random_population.append(function_apply(list(item)))
-
+        if(function_apply.__name__ == "mutateBit"):
+            for i in range(0, 100):
+                random_population.append(function_apply(list(item)))
+        else:
+            for i in range(0, 100, 1):
+                temp_i = list(item)
+                if(i > 0):
+                    print(random_population)
+                    print(i)
+                    temp_i = list(random_population[i-1])
+                    last_, new_ =  applyCrossOverForBits(temp_i, item, random.randint(1, nbits))
+                    random_population[i-1] = last_
+                    random_population.append(new_)
+                else:
+                    random_population.append(list(item))
         df = pd.DataFrame(np.asarray(random_population))
 
         df['fitness'] = df.apply(lambda x: fitnessForPatter(x, correct_pattern), axis=1)
         df.sort_values(by='fitness', ascending=False, inplace=True)
         print(df['fitness'].iloc[0])
         if(df['fitness'].iloc[0] == nbit):
-            raise Exception
+            df.drop(['fitness'], axis=1, inplace=True)
+
+            return [df.values[0], numberOfAttemptsPop]
         df = df.iloc[:int(len(df)*0.3)]
         df.drop(['fitness'], axis=1, inplace=True)
-
-        applyPopulationOnDataset(df, nbits, mutateBit)
+        
+        return applyPopulationOnDataset(numberOfAttemptsPop, df, nbits, mutateBit)
 
 
 def runGetCorrectPattern(correct_pattern, nbits, population = False):
@@ -77,6 +100,8 @@ def runGetCorrectPattern(correct_pattern, nbits, population = False):
         comparison = random_pattern == correct_pattern
         better_pattern_found = False
         idx = 0
+        numberOfAttempts += 1
+
         while (idx < 1000 and not comparison.all()):
             idx += 1
             if(population):
@@ -88,10 +113,8 @@ def runGetCorrectPattern(correct_pattern, nbits, population = False):
                     # print(len(df))
                     df = df.iloc[:int(len(df)*0.3)]
                     df.drop(['fitness'], axis=1, inplace=True)
-                    value = applyPopulationOnDataset(df, nbits, mutateBit)
-                    if(df['fitness'].iloc[0] == nbit):
-                        print("found")
-                        raise Exception
+                    random_pattern, numberOfAttempts = applyPopulationOnDataset(numberOfAttempts, df, nbits, applyCrossOverForBits)
+                    comparison = random_pattern == correct_pattern
             else:
                 random_copy = random_pattern.copy()
                 muttated_bit = mutateBit(random_copy)
@@ -102,7 +125,6 @@ def runGetCorrectPattern(correct_pattern, nbits, population = False):
                 if(fitness_mutated > fitness_random):
                     random_pattern = muttated_bit.copy()
             # print(evaluationForPatter(correct_pattern, random_pattern))
-        numberOfAttempts += 1
         if(comparison.all()):
             correct = True
             end = time.time()
@@ -121,7 +143,7 @@ def index_in_list(a_list, index):
 if(__name__ == '__main__'):
     testResults = {}
     showResults = []
-    n_bits = [1024, 12, 16, 18, 22, 24, 64, 128, 256, 512, 1024, 1500, 2048, 2512]
+    n_bits = [8, 12, 16, 18, 22, 24, 64, 128, 256, 512]
     number_of_tests = 30
     # random.seed(123123) #used in exercise 1
     random.seed(time.time()) #used in exercise 1
